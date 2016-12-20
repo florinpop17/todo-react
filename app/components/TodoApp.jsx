@@ -16,7 +16,7 @@ var TodoApp = React.createClass({
                 }, {
                     id: 2,
                     text: "Clean the yard",
-                    completed: true
+                    completed: false
                 }, {
                     id: 3,
                     text: "Go for a walk",
