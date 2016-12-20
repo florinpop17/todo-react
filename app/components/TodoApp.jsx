@@ -14,6 +14,10 @@ var TodoApp = React.createClass({
         }  
     },
     
+    componentDidUpdate: function() {
+        TodoAPI.setTodos(this.state.todos);  
+    },
+    
     handleAddTodo: function(text) {
         var newId = this.state.todos.length + 1;
         var newText = text;
