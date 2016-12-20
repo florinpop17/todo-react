@@ -6,6 +6,8 @@ var AddTodo = React.createClass({
         if(this.refs.item.value.length > 0){
             this.props.onSubmitHandle(this.refs.item.value);
             this.refs.item.value = "";
+        } else {
+            this.refs.item.focus();
         }
     },
     render: function() {
