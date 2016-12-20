@@ -34,8 +34,6 @@ var TodoApp = React.createClass({
         var newId = this.state.todos.length + 1;
         var newText = text;
         
-        console.log(newId, newText);
-        
         var newTodo = {
             id: newId,
             text: newText,
