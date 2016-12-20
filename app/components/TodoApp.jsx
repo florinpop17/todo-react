@@ -11,16 +11,20 @@ var TodoApp = React.createClass({
             todos: [
                 {
                     id: 1,
-                    text: "Walk the dog"
+                    text: "Walk the dog",
+                    completed: false
                 }, {
                     id: 2,
-                    text: "Clean the yard"
+                    text: "Clean the yard",
+                    completed: true
                 }, {
                     id: 3,
-                    text: "Go for a walk"
+                    text: "Go for a walk",
+                    completed: false
                 }, {
                     id: 4,
-                    text: "Learn React"
+                    text: "Learn React",
+                    completed: true
                 }
             ]
         }  
@@ -34,11 +38,19 @@ var TodoApp = React.createClass({
         
         var newTodo = {
             id: newId,
-            text: newText
+            text: newText,
+            completed: false
         }
         
         this.setState({
             todos: this.state.todos.concat([newTodo])
+//            todos: [
+//                ...this.state.todos,
+//                {
+//                    id: newId,
+//                    text: newText
+//                }
+//            ]
         });
     },
     
