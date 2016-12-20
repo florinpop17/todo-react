@@ -24,13 +24,19 @@ var TodoApp = React.createClass({
     },
     
     handleAddTodo: function(text) {
-        var newId = todos.length;
+        var newId = this.state.todos.length + 1;
         var newText = text;
+        
+        console.log(newId, newText);
+        
         var newTodo = {
             id: newId,
             text: newText
         }
-        setState({todos[...newTodo]});
+        
+        this.setState({
+            todos: this.state.todos.concat([newTodo])
+        });
     },
     
     render: function (){
