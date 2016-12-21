@@ -27,7 +27,40 @@ h1 {
     display: flex;
 }
 
+.container__message {
+    padding: 1rem 1rem 0 1rem;
+}
+
 .container__footer {
     border-top: 1px solid #eeeeee;
     padding: 1rem 1rem 0 1rem;
+}
+
+.todo {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    padding: 1rem;
+    transition: background .3s ease;
+}
+
+.todo p, .todo input{
+    margin: 0;
+}
+
+.todo > :first-child {
+    margin-right: 1rem;
+}
+
+.todo:hover {
+    background: #f0f0f0;
+}
+
+.todo-completed .todo__subtext, .todo__subtext {
+    color: #999999;
+}
+
+.todo-completed p, .todo-completed input {
+    color: #333;
+    text-decoration: line-through;
 }
