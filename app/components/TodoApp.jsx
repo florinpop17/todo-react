@@ -5,6 +5,8 @@ var TodoSearch = require('TodoSearch');
 
 var TodoAPI = require('TodoAPI');
 
+var moment = require('moment');
+
 var TodoApp = React.createClass({
     getInitialState: function(){
         return {
@@ -29,14 +31,16 @@ var TodoApp = React.createClass({
         }
         
         this.setState({
-            todos: this.state.todos.concat([newTodo])
-//            todos: [
-//                ...this.state.todos,
-//                {
-//                    id: newId,
-//                    text: newText
-//                }
-//            ]
+//            todos: this.state.todos.concat([newTodo])
+            todos: [
+                ...this.state.todos,
+                {
+                    id: newId,
+                    text: newText,
+                    completed: false,
+                    createdAt: moment().unix()
+                }
+            ]
         });
     },
     
