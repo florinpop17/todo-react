@@ -22,5 +22,20 @@ module.exports = {
             return todos;
         else
             return [];
+    },
+    
+    filterTodos: function(todos, show, search) {
+        var filteredTodos = todos;
+        
+        //Filter by show
+        filteredTodos = filteredTodos.filter((todo) => {
+             return !todo.completed || show;
+        });
+        
+        //Filter by search
+        
+        //Sort todos with non-completed first
+        
+        return filteredTodos;
     }
 };
